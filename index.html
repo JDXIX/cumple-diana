@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <!--
+        Hace que la experiencia se adapte correctamente
+        a celulares, tablets y computadoras.
+    -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Una pequeña historia clínica de cumpleaños para Diana.">
+
+  <!-- Color utilizado por algunos navegadores móviles -->
+  <meta name="theme-color" content="#111416">
+
+  <title>Historia clínica de Diana</title>
+
+  <!-- Estilos generales de la experiencia -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+         EXPERIENCIA COMPLETA
+         ===================================================== -->
+
+  <main class="experiencia" id="experiencia">
+
+
+    <!-- =================================================
+             PANTALLA DE INICIO
+             ================================================= -->
+
+    <section class="pantalla-inicial" id="pantallaInicial" aria-labelledby="tituloInicial">
+
+      <div class="inicio-contenido">
+
+        <!--
+                    Monitor médico decorativo.
+
+                    La línea del electrocardiograma será
+                    animada posteriormente desde CSS.
+                -->
+        <div class="monitor-inicial" aria-hidden="true">
+
+          <div class="monitor-linea">
+
+            <span class="ecg-segmento"></span>
+            <span class="ecg-pulso"></span>
+            <span class="ecg-segmento"></span>
+
+          </div>
+
+        </div>
+
+
+        <p class="etiqueta-medica">
+          Historia clínica
+        </p>
+
+
+        <h1 id="tituloInicial">
+          Diana
+          <span>
+            “La Clasista”
+          </span>
+        </h1>
+
+
+        <div class="dato-inicial">
+
+          <span>
+            Motivo de consulta:
+          </span>
+
+          <strong>
+            cumpleaños
+          </strong>
+
+        </div>
+
+
+        <!--
+                    El clic en este botón será el gesto del usuario
+                    que nos permitirá iniciar la reproducción musical.
+                -->
+        <button class="boton-iniciar" id="botonIniciar" type="button">
+          Iniciar diagnóstico
+
+          <span aria-hidden="true">
+            🩺
+          </span>
+        </button>
+
+
+        <p class="indicacion-inicial">
+          Toca para comenzar
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+             ESCENARIO PRINCIPAL
+             ================================================= -->
+
+    <section class="escenario" id="escenario" aria-hidden="true">
+
+
+      <!-- =================================================
+                 MONITOR SUPERIOR
+                 ================================================= -->
+
+      <!--
+                Este electrocardiograma permanecerá como elemento
+                común en varias escenas.
+
+                Cambiará de velocidad según lo que esté ocurriendo.
+            -->
+      <div class="monitor" id="monitor" aria-hidden="true">
+
+        <div class="monitor-superior">
+
+          <span>
+            PACIENTE: DIANA
+          </span>
+
+          <span class="estado-monitor" id="estadoMonitor">
+            ESTABLE
+          </span>
+
+        </div>
+
+
+        <div class="ecg">
+
+          <div class="ecg-linea" id="ecgLinea"></div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+                 CONTENEDOR DE ESCENAS
+                 ================================================= -->
+
+      <div class="escenas" id="escenas">
+
+
+        <!-- =============================================
+                     ESCENA 1
+                     EL COLEGIO
+                     ============================================= -->
+
+        <section class="escena escena-colegio" id="escenaColegio" aria-hidden="true">
+
+          <div class="encabezado-escena">
+
+            <span class="numero-expediente">
+              01
+            </span>
+
+            <p>
+              Colegio · hace +8 años
+            </p>
+
+          </div>
+
+
+          <!-- =================================================
+               PERSONAJES DEL COLEGIO
+               ================================================= -->
+          <div class="personajes-colegio" aria-hidden="true">
+            <!--
+                Los dibujos SVG serán generados desde JavaScript.
+
+                Esto mantiene el HTML limpio y permite reutilizar
+                exactamente las mismas proporciones en todas las escenas.
+            -->
+            <div class="avatar-personaje avatar--jordy" data-avatar="jordy" data-nombre="Jordy"></div>
+            <div class="avatar-personaje avatar--diana" data-avatar="diana" data-nombre="Diana"></div>
+          </div>
+
+
+          <!-- Globo de Jordy -->
+          <div class="dialogo dialogo--jordy" id="dialogoJordy">
+            En mi anterior escuela sí había proyector.
+          </div>
+
+
+          <!-- Globo de Diana -->
+          <div class="dialogo dialogo--diana" id="dialogoDiana">
+            Pues regrésate a tu escuela, vrg.
+          </div>
+
+
+          <p class="remate-escena" id="remateColegio">
+            Excelente primera impresión.
+          </p>
+
+
+          <p class="texto-secundario" id="textoOchoAnios">
+            +8 años después… seguimos soportándonos ✓
+          </p>
+
+        </section>
+
+
+
+        <!-- =============================================
+                     ESCENA 2
+                     PRIMERA BORRACHERA
+                     ============================================= -->
+
+        <section class="escena escena-taxi" id="escenaTaxi" aria-hidden="true">
+
+          <div class="encabezado-escena">
+
+            <span class="numero-expediente">
+              02
+            </span>
+
+            <p>
+              Antecedente importante
+            </p>
+
+          </div>
+
+
+          <h2 class="titulo-escena">
+            Primera borrachera.
+          </h2>
+
+
+          <!--
+                        Vasos generados visualmente con CSS.
+
+                        Aparecerán progresivamente alrededor
+                        del personaje de Jordy.
+                    -->
+          <div class="bebidas" id="bebidas" aria-hidden="true">
+
+            <span class="vaso vaso--1"></span>
+            <span class="vaso vaso--2"></span>
+            <span class="vaso vaso--3"></span>
+            <span class="vaso vaso--4"></span>
+            <span class="vaso vaso--5"></span>
+
+          </div>
+
+
+          <!-- Diana estaba acompañando a Jordy y fue quien terminó ayudándolo a subir al taxi. -->
+          <div class="acompanantes-taxi" id="jordyBorracho" aria-hidden="true">
+            <!-- Diana intentando mantener la situación bajo control -->
+            <div class="avatar-personaje avatar--diana" data-avatar="diana"></div>
+            <!-- Jordy claramente fuera de servicio -->
+            <div class="avatar-personaje avatar--jordy avatar--mareado" data-avatar="jordy"></div>
+          </div>
+
+
+          <p class="mensaje-taxi" id="mensajeTome">
+            Tomé de más.
+          </p>
+
+
+          <!--
+                        Taxi construido completamente con CSS.
+                    -->
+          <div class="taxi" id="taxi" aria-hidden="true">
+
+            <div class="taxi-letrero">
+              TAXI
+            </div>
+
+            <div class="taxi-carroceria">
+
+              <span class="taxi-ventana taxi-ventana--1"></span>
+              <span class="taxi-ventana taxi-ventana--2"></span>
+
+            </div>
+
+            <span class="rueda rueda--1"></span>
+            <span class="rueda rueda--2"></span>
+
+          </div>
+
+
+          <!--
+                        Representación caricaturesca del accidente.
+
+                        Será breve y nada explícita.
+                    -->
+          <div class="accidente-taxi" id="accidenteTaxi" aria-hidden="true"></div>
+
+
+          <div class="resultado-taxi" id="resultadoTaxi">
+
+            <p>
+              Y sí…
+            </p>
+
+            <strong>
+              vomité.
+            </strong>
+
+            <p>
+              En el taxi de su mamá.
+            </p>
+
+            <small>
+              Perdón, señora.
+            </small>
+
+          </div>
+
+        </section>
+
+
+
+        <!-- =============================================
+                     ESCENA 3
+                     MAMA NEGRA
+                     ============================================= -->
+
+        <section class="escena escena-mama-negra" id="escenaMamaNegra" aria-hidden="true">
+
+          <div class="encabezado-escena">
+
+            <span class="numero-expediente">
+              03
+            </span>
+
+            <p>
+              Mama Negra
+            </p>
+
+          </div>
+
+
+          <!--
+                        Elementos festivos decorativos.
+
+                        CSS los convertirá en banderines y
+                        movimiento de desfile.
+                    -->
+          <div class="banderines" aria-hidden="true">
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+          </div>
+
+
+          <div class="grupo-mama-negra" aria-hidden="true">
+            <!-- Diana -->
+            <div class="avatar-personaje avatar--diana" data-avatar="diana" data-personaje="diana"></div>
+            <!-- Primo -->
+            <div class="avatar-personaje avatar--primo" data-avatar="primo" data-personaje="primo"></div>
+            <!-- Jordy -->
+            <div class="avatar-personaje avatar--jordy" data-avatar="jordy" data-personaje="jordy"></div>
+            <!-- Chica desconocida -->
+            <div class="avatar-personaje avatar--desconocida" data-avatar="desconocida" data-personaje="desconocida"></div>
+          </div>
+
+
+          <div class="dialogo dialogo--presentacion" id="dialogoPresentacion">
+            Ella es mi mejor amiga…
+            <br>
+            y él mi primo.
+          </div>
+
+
+          <!--
+                        El beso será sugerido mediante movimiento,
+                        sin necesidad de mostrar nada explícito.
+                    -->
+          <div class="efecto-beso" id="efectoBeso" aria-hidden="true">
+            ♥
+          </div>
+
+
+          <div class="alerta-dato" id="alertaDato">
+
+            <span>
+              ⚠ DATO IMPORTANTE
+            </span>
+
+            <strong>
+              Yo ni la conocía.
+            </strong>
+
+          </div>
+
+        </section>
+
+
+
+        <!-- =============================================
+                     ESCENA 4
+                     DIAGNÓSTICO RÁPIDO
+                     ============================================= -->
+
+        <section class="escena escena-diagnostico" id="escenaDiagnostico" aria-hidden="true">
+
+          <div class="encabezado-escena">
+
+            <span class="numero-expediente">
+              04
+            </span>
+
+            <p>
+              Resultados
+            </p>
+
+          </div>
+
+
+          <div class="resultados">
+
+            <div class="resultado" data-resultado="fiesta">
+              <span>
+                Fiestera
+              </span>
+
+              <strong>
+                POSITIVO ✓
+              </strong>
+            </div>
+
+
+            <div class="resultado" data-resultado="clasismo">
+              <span>
+                Clasismo
+              </span>
+
+              <strong>
+                CRÓNICO
+              </strong>
+            </div>
+
+
+            <div class="resultado" data-resultado="consejos">
+              <span>
+                Consejos
+              </span>
+
+              <strong>
+                EFICACIA VARIABLE
+              </strong>
+            </div>
+
+
+            <div class="resultado" data-resultado="patriotismo">
+              <span>
+                Gustos patrióticos
+              </span>
+
+              <strong>
+                CONFIRMADOS
+              </strong>
+            </div>
+
+          </div>
+
+
+          <!--
+                        Pequeño radar humorístico para la broma
+                        sobre sus gustos por los militares.
+                    -->
+          <div class="radar" id="radar" aria-hidden="true">
+
+            <span class="radar-circulo radar-circulo--1"></span>
+            <span class="radar-circulo radar-circulo--2"></span>
+
+            <span class="radar-linea"></span>
+
+            <span class="radar-objetivo"></span>
+
+          </div>
+
+        </section>
+
+
+
+        <!-- =============================================
+                     ESCENA 5
+                     FOTO
+                     ============================================= -->
+
+        <section class="escena escena-foto" id="escenaFoto" aria-hidden="true">
+
+          <div class="foto-evidencia" id="fotoEvidencia">
+
+            <!--
+                            Si todavía no elegiste la foto,
+                            podés dejar esta ruta por ahora.
+
+                            Después solamente tendremos que colocar
+                            la imagen correspondiente en assets/fotos/.
+                        -->
+            <img src="assets/fotos/recuerdo-divertido-01.jpg" alt="Un recuerdo divertido juntos">
+
+            <span class="etiqueta-evidencia">
+              EVIDENCIA
+            </span>
+
+          </div>
+
+
+          <p class="frase-foto frase-foto--1">
+            Muchas historias.
+          </p>
+
+          <p class="frase-foto frase-foto--2">
+            Pocas pruebas.
+          </p>
+
+        </section>
+
+
+
+        <!-- =============================================
+                     ESCENA 6
+                     CAMBIO DE TONO
+                     ============================================= -->
+
+        <section class="escena escena-transicion" id="escenaTransicion" aria-hidden="true">
+
+          <p class="fuera-de-joda">
+            Fuera de joda…
+          </p>
+
+        </section>
+
+
+
+        <!-- =============================================
+                     PARTE EMOCIONAL
+                     Fotografías + mensajes breves
+                     ============================================= -->
+
+        <section class="escena escena-emocional" id="escenaEmocional" aria-hidden="true">
+
+          <!--
+                        La fotografía cambia junto con cada frase.
+
+                        Utilizamos una sola imagen para mantener
+                        el DOM simple y evitar superposiciones
+                        innecesarias.
+                    -->
+          <div class="recuerdo-visual" id="recuerdoVisual">
+
+            <img id="fotoEmocional" src="assets/fotos/juntos-01.jpg" alt="Un recuerdo juntos">
+
+            <!--
+                            Oscurece ligeramente la parte inferior
+                            para mantener el texto siempre legible.
+                        -->
+            <div class="degradado-foto" aria-hidden="true"></div>
+
+          </div>
+
+
+          <div class="mensaje-emocional-contenedor">
+            <p class="mensaje-emocional" id="mensajeEmocional" aria-live="polite"></p>
+          </div>
+
+        </section>
+
+
+
+        <!-- =============================================
+                     ESCENA 8
+                     CIERRE
+                     ============================================= -->
+
+        <section class="escena escena-cierre" id="escenaCierre" aria-hidden="true">
+
+          <p class="diagnostico-final">
+            Diagnóstico final
+          </p>
+
+
+          <div class="resultado-final" id="resultadoFinal">
+
+            <p>
+              Clasismo incurable.
+            </p>
+
+            <p>
+              Gustos patrióticos sin tratamiento.
+            </p>
+
+          </div>
+
+
+          <!--
+                        ECG que terminará formando visualmente
+                        un pequeño corazón.
+                    -->
+          <div class="corazon-ecg" aria-hidden="true">
+
+            <span></span>
+
+          </div>
+
+
+          <div class="felicitacion-final" id="felicitacionFinal">
+
+            <h2>
+              Feliz cumpleaños, Diana
+              <span aria-hidden="true">
+                💛
+              </span>
+            </h2>
+
+            <p>
+              — Jordy
+            </p>
+
+          </div>
+
+
+          <button class="boton-alta" id="botonAlta" type="button">
+            Dar de alta
+          </button>
+
+        </section>
+
+      </div>
+
+
+
+      <!-- =================================================
+                 CONFETI FINAL
+                 ================================================= -->
+
+      <!--
+                JavaScript agregará aquí las partículas solamente
+                cuando Diana presione "Dar de alta".
+            -->
+      <div class="confeti" id="confeti" aria-hidden="true"></div>
+
+
+
+      <!-- =================================================
+                 CONTROL DE MÚSICA
+                 ================================================= -->
+
+      <button class="control-audio" id="controlAudio" type="button" aria-label="Pausar música" title="Pausar música">
+        <span id="iconoAudio" aria-hidden="true">
+          ♪
+        </span>
+      </button>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =====================================================
+         AUDIOS
+         ===================================================== -->
+
+  <!--
+        Música alegre del primer tramo.
+
+        Comenzará desde el segundo 0 cuando Diana toque
+        "Iniciar diagnóstico".
+    -->
+  <audio id="musicaInicio" preload="auto">
+    <source src="assets/audio/musica-inicio.mp3" type="audio/mpeg">
+
+    Tu navegador no permite reproducir audio.
+  </audio>
+
+
+  <!--
+        Familia se utilizará solamente durante la parte sincera.
+
+        JavaScript la posicionará aproximadamente en 00:49
+        antes de comenzar a reproducirla.
+    -->
+  <audio id="musicaFamilia" preload="auto">
+    <source src="assets/audio/familia.mp3" type="audio/mpeg">
+
+    Tu navegador no permite reproducir audio.
+  </audio>
+
+
+
+  <!-- Lógica de toda la experiencia -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
